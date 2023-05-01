@@ -41,3 +41,12 @@ Por favor abran y tengan a la mano los siguientes enlaces que necesitaremos:
 ## Variables de entorno
 
 `npm i dotenv`
+
+Código fuente de la sección
+Aquí les dejo el código fuente de la sección que pueden usar para compararlo contra el suyo, recuerden que si el API Key no funciona, deben de cambiarlos por los suyos.
+
+GitHub: node-clima-app
+
+Importante:
+
+Si pueden, actualicen la reseña del curso o bien califíquenlo como ustedes consideren que este curso merece, recuerden que estoy regrabando y revisando todas las clases con el objetivo de que puedan aprovechar al máximo su tiempo y la inversión que han hecho con mi curso. Sus reseñas me ayudan mucho a poder llegar a más alumnos y que el curso siga vigente hoy en día :)
