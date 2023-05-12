@@ -77,15 +77,18 @@ const usuarioPost = async (req, res = response) => {
 const usuarioDelete = async (req, res = response) => {
 
     const { id } = req.params;
+    const uid = req.uid;
 
     // Borrado Fisicamente
     // const user = await User.findByIdAndDelete(id);
 
     // cambio de estado...
     const user = await User.findByIdAndUpdate(id, { state: false });
+    //const userAutentication = req.user;
 
     res.json({
-        user
+        user//,
+        //userAutentication
     });
 }
 
