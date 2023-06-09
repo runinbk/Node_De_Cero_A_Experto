@@ -14,10 +14,7 @@ const {
     validarJWT,
     isAdminRole,
     haveRole
-} = require('../middlewares')
-// const { validarCampos } = require('../middlewares/validar-campos');
-// const { validarJWT } = require('../middlewares/validar-jwt');
-// const { isAdminRole, haveRole } = require('../middlewares/validar-role');
+} = require('../middlewares');
 
 const { isRoleValue, isEmailExist, isUserForID } = require('../helpers/db-validators');
 

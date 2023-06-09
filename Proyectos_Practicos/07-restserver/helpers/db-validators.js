@@ -41,10 +41,22 @@ const isProductForID = async (id) => {
     }
 };
 
+/**
+ * Validar colecciones permitidas
+ */
+const coleccionesPermitidas = (coleccion = '', colecciones = []) => {
+    const incluida = colecciones.includes(coleccion);
+    if (!incluida) {
+        throw new Error(`La coleccion ${coleccion} no esta permitida`);
+    }
+    return true;
+}
+
 module.exports = {
     isRoleValue,
     isCategoryForID,
     isEmailExist,
     isProductForID,
     isUserForID,
+    coleccionesPermitidas
 };

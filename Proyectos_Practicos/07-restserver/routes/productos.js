@@ -10,7 +10,7 @@ const {
     borrarProducto
 } = require('../controllers/productos');
 
-const { isCategoryForID, isProductForID } = require('../helpers/db-validators');
+const { isCategoryForID, isProductForID } = require('../helpers');
 
 const router = Router();
 
