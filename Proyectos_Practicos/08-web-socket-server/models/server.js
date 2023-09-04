@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const { socketController } = require('../controllers/sockets');
 
 class Server {
 
@@ -45,26 +46,7 @@ class Server {
 
     // Sockets
     sockets() {
-        this.io.on('connection', socket => {
-            console.log("Cliente conectado", socket.id);
-
-            socket.on('disconnect', () => {
-                console.log(`El cliente desconectó`, socket.id);
-            })
-
-            //Escuchar evento emitido
-            socket.on('enviar-mensaje', (payload, callback) => {
-                const id = 123456;
-                callback(id); // Esta línea envía la respuesta al cliente
-                // Aqui tambien se pueden regresar objetos
-                // callback({ id, fecha: new Date().getTime() });
-            });
-
-            // socket.on('enviar-mensaje', (payload) => {
-            // this.io.emit('enviar-mensaje', payload)
-            // })
-
-        });
+        this.io.on('connection', socketController);
     }
 
     listen() {
